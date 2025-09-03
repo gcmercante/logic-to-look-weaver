@@ -34,7 +34,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} currentPage="home" />
       <main>
         <Hero />
         <About />

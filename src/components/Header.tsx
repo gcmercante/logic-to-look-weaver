@@ -6,9 +6,10 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 interface HeaderProps {
   darkMode: boolean;
   toggleDarkMode: () => void;
+  currentPage?: string;
 }
 
-const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
+const Header = ({ darkMode, toggleDarkMode, currentPage = "home" }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -21,14 +22,22 @@ const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
   }, []);
 
   const navigationItems = [
-    { href: "#about", label: "Sobre" },
-    { href: "#services", label: "Serviços" },
-    { href: "#contact", label: "Contato" },
+    { href: currentPage === "home" ? "#about" : "/", label: currentPage === "home" ? "Sobre" : "Início" },
+    { href: currentPage === "home" ? "#services" : "/#services", label: "Serviços" },
+    { href: currentPage === "home" ? "#contact" : "/#contact", label: "Contato" },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
+  if (currentPage === "home") {
+    navigationItems[0] = { href: "/about", label: "Sobre" };
+  }
+
+  const handleNavigation = (href: string) => {
+    if (href.startsWith("#")) {
+      const element = document.querySelector(href);
+      element?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = href;
+    }
   };
 
   return (
@@ -40,7 +49,10 @@ const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
       }`}
     >
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-primary cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
+        <h1 
+          className="text-2xl font-bold text-primary cursor-pointer" 
+          onClick={() => window.location.href = "/"}
+        >
           Operação Nutri
         </h1>
         
@@ -50,7 +62,7 @@ const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
             {navigationItems.map((item) => (
               <button
                 key={item.href}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item.href)}
                 className="text-foreground hover:text-primary transition-smooth font-medium"
               >
                 {item.label}
@@ -82,7 +94,7 @@ const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
                   {navigationItems.map((item) => (
                     <button
                       key={item.href}
-                      onClick={() => scrollToSection(item.href)}
+                      onClick={() => handleNavigation(item.href)}
                       className="text-left text-foreground hover:text-primary transition-smooth py-2 font-medium"
                     >
                       {item.label}
