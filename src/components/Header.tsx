@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { LuMenu, LuSun, LuMoon } from "react-icons/lu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import logo from "@/assets/op-nutri-logo.png";
+import logoWhite from "@/assets/op-nutri-logo-white.png";
 
 interface HeaderProps {
   darkMode: boolean;
@@ -54,13 +56,17 @@ const Header = ({ darkMode, toggleDarkMode, currentPage = "home" }: HeaderProps)
         : "bg-background/80 backdrop-blur-sm"
         }`}
     >
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <h1
-          className="text-2xl font-bold text-primary cursor-pointer"
+      <div className="container mx-auto px-4 flex items-center justify-between">
+        <div
+          className="cursor-pointer py-5"
           onClick={() => window.location.href = "/"}
         >
-          Operação Nutri
-        </h1>
+          <img
+            src={darkMode ? logoWhite : logo}
+            alt="Operação Nutri Logo"
+            className="w-auto md:h-16 h-12"
+          />
+        </div>
 
         <div className="flex items-center gap-4">
           {/* Desktop Navigation */}
@@ -69,7 +75,7 @@ const Header = ({ darkMode, toggleDarkMode, currentPage = "home" }: HeaderProps)
               <button
                 key={item.href}
                 onClick={() => handleNavigation(item.href)}
-                className="text-foreground hover:text-primary transition-smooth font-medium"
+                className="text-foreground hover:text-primary transition-smooth font-medium text-lg"
               >
                 {item.label}
               </button>
@@ -81,9 +87,12 @@ const Header = ({ darkMode, toggleDarkMode, currentPage = "home" }: HeaderProps)
             variant="ghost"
             size="icon"
             onClick={toggleDarkMode}
-            className="rounded-full hover:bg-accent"
+            className="rounded-full"
           >
-            {darkMode ? <LuSun className="h-5 w-5" /> : <LuMoon className="h-5 w-5" />}
+            {darkMode
+              ? <LuSun className="custom-icon-size" />
+              : <LuMoon className="custom-icon-size" />
+            }
           </Button>
 
           {/* Mobile Menu */}

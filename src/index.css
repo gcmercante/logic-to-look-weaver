@@ -136,4 +136,9 @@
       'GRAD' 0,
       'opsz' 24;
   }
+
+  .custom-icon-size {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+  }
 }
