@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { 
-  Shield, 
-  GraduationCap, 
-  Users, 
-  FileText, 
-  CheckCircle, 
-  Clock, 
+import {
+  Shield,
+  GraduationCap,
+  Users,
+  FileText,
+  CheckCircle,
+  Clock,
   Award,
   BarChart3,
   BookOpen,
@@ -172,14 +172,14 @@ const Services = () => {
           <div className="container mx-auto max-w-4xl text-center animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-foreground">
               Nossos{" "}
-              <span className="text-primary gradient-primary bg-clip-text text-transparent">
+              <span className="text-primary gradient-primary bg-clip-text">
                 Serviços
               </span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
               Soluções completas e personalizadas para atender às necessidades específicas da sua empresa em segurança alimentar.
             </p>
-            
+
             <Button
               onClick={scrollToContact}
               size="lg"
@@ -260,7 +260,7 @@ const Services = () => {
                           </h4>
                           <p className="text-muted-foreground">{service.duration}</p>
                         </div>
-                        
+
                         <div>
                           <h4 className="font-bold text-foreground mb-3 flex items-center gap-2">
                             <FileText className="w-5 h-5 text-primary" />
