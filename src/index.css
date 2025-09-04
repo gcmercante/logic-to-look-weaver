@@ -30,7 +30,7 @@
     --muted-foreground: 220 8.9% 46.1%;
 
     /* Accent - Light Pink Background */
-    --accent: 340 20% 97%;
+    --accent: 340 100% 95%;
     --accent-foreground: 224 71.4% 4.1%;
 
     --destructive: 0 84.2% 60.2%;
@@ -130,7 +130,7 @@
 
   /* Material Icons integration */
   .material-symbols-outlined {
-    font-variation-settings: 
+    font-variation-settings:
       'FILL' 0,
       'wght' 400,
       'GRAD' 0,

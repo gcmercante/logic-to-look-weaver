@@ -22,9 +22,10 @@ const Header = ({ darkMode, toggleDarkMode, currentPage = "home" }: HeaderProps)
   }, []);
 
   const navigationItems = [
-    { href: currentPage === "home" ? "#about" : "/", label: currentPage === "home" ? "Sobre" : "Início" },
-    { href: currentPage === "home" ? "#services" : "/#services", label: "Serviços" },
-    { href: currentPage === "home" ? "#contact" : "/#contact", label: "Contato" },
+    { href: "/about", label: "Sobre" },
+    { href: "/cases", label: "Cases" },
+    { href: "/services", label: "Serviços" },
+    { href: "/contact", label: "Contato" },
   ];
 
   if (currentPage === "home") {
@@ -33,29 +34,34 @@ const Header = ({ darkMode, toggleDarkMode, currentPage = "home" }: HeaderProps)
 
   const handleNavigation = (href: string) => {
     if (href.startsWith("#")) {
-      const element = document.querySelector(href);
-      element?.scrollIntoView({ behavior: "smooth" });
+      // If we're on the home page, scroll to the section
+      if (currentPage === "home") {
+        const element = document.querySelector(href);
+        element?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        // If we're on another page, navigate to home with hash
+        window.location.href = `/${href}`;
+      }
     } else {
       window.location.href = href;
     }
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-background/95 backdrop-blur-sm shadow-soft border-b" 
-          : "bg-background/80 backdrop-blur-sm"
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-background/95 backdrop-blur-sm shadow-soft border-b"
+        : "bg-background/80 backdrop-blur-sm"
+        }`}
     >
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <h1 
-          className="text-2xl font-bold text-primary cursor-pointer" 
+        <h1
+          className="text-2xl font-bold text-primary cursor-pointer"
           onClick={() => window.location.href = "/"}
         >
           Operação Nutri
         </h1>
-        
+
         <div className="flex items-center gap-4">
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">

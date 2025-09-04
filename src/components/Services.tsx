@@ -21,7 +21,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 px-4 bg-accent">
+    <section id="services" className="py-20 px-4 bg-primary/10">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
@@ -29,15 +29,15 @@ const Services = () => {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6 rounded-full" />
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Oferecemos soluções completas e personalizadas para atender às necessidades 
+            Oferecemos soluções completas e personalizadas para atender às necessidades
             específicas da sua empresa em segurança alimentar.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="bg-card shadow-card hover:shadow-hero transition-smooth hover:-translate-y-2 border-0 animate-fade-in"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
