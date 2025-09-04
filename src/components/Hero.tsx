@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="relative z-10 max-w-4xl mx-auto text-center animate-fade-in">
         <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-foreground">
           Garantindo a Segurança dos Alimentos,{" "}
-          <span className="text-primary gradient-primary bg-clip-text text-transparent">
+          <span className="text-primary gradient-primary bg-clip-text">
             Protegendo a Sua Marca
           </span>
         </h1>

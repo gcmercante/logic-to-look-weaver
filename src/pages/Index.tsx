@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import heroBackground from "@/assets/hero-background.jpg";
-import { LuArrowRight, LuCircleCheckBig, LuGraduationCap, LuShield, LuStar, LuTrendingUp, LuUser } from "react-icons/lu"
+import { LuArrowRight, LuCircleCheckBig, LuGraduationCap, LuShield, LuStar, LuTrendingUp, LuUsers } from "react-icons/lu"
 
 const Index = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -55,7 +55,7 @@ const Index = () => {
       path: "/services"
     },
     {
-      icon: LuUser,
+      icon: LuUsers,
       title: "Serviços de Consultoria",
       description: "Orientação especializada no desenvolvimento e implementação de sistemas eficazes de gestão da segurança alimentar.",
       path: "/services"
@@ -74,7 +74,7 @@ const Index = () => {
       title: "Nossa Empresa",
       description: "Conheça nossa história, missão e a equipe especializada que transformou centenas de empresas.",
       path: "/about",
-      icon: LuUser,
+      icon: LuUsers,
       features: ["14 anos de mercado", "Equipe especializada", "Certificações internacionais"]
     },
     {

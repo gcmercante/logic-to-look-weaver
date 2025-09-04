@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, Sun, Moon } from "lucide-react";
+import { LuMenu, LuSun, LuMoon } from "react-icons/lu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 interface HeaderProps {
@@ -83,14 +83,14 @@ const Header = ({ darkMode, toggleDarkMode, currentPage = "home" }: HeaderProps)
             onClick={toggleDarkMode}
             className="rounded-full hover:bg-accent"
           >
-            {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            {darkMode ? <LuSun className="h-5 w-5" /> : <LuMoon className="h-5 w-5" />}
           </Button>
 
           {/* Mobile Menu */}
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-5 w-5" />
+                <LuMenu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">

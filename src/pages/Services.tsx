@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
 import {
-  Shield,
-  GraduationCap,
-  Users,
-  FileText,
-  CheckCircle,
-  Clock,
-  Award,
-  BarChart3,
-  BookOpen,
-  Settings,
-  Search,
-  Target
-} from "lucide-react";
+  LuShield,
+  LuGraduationCap,
+  LuUsers,
+  LuFileText,
+  LuCircleCheckBig,
+  LuClock,
+  LuAward,
+  LuChartColumn,
+  LuBookOpen,
+  LuSettings,
+  LuSearch,
+  LuTarget
+} from "react-icons/lu";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -46,7 +46,7 @@ const Services = () => {
 
   const mainServices = [
     {
-      icon: Shield,
+      icon: LuShield,
       title: "Auditorias de Segurança Alimentar",
       shortDescription: "Avaliações completas de suas operações para identificar áreas de melhoria e garantir a conformidade com os regulamentos.",
       detailedDescription: "Realizamos auditorias completas e detalhadas de todos os aspectos da sua operação alimentar, desde a recepção de matérias-primas até a distribuição do produto final.",
@@ -62,7 +62,7 @@ const Services = () => {
       deliverables: ["Relatório Executivo", "Plano de Ação", "Certificado de Auditoria"]
     },
     {
-      icon: GraduationCap,
+      icon: LuGraduationCap,
       title: "Programas de Treinamento",
       shortDescription: "Programas de treinamento abrangentes para sua equipe, cobrindo todos os aspectos de segurança alimentar e higiene.",
       detailedDescription: "Desenvolvemos programas de capacitação personalizados para diferentes níveis hierárquicos, garantindo que toda a equipe tenha o conhecimento necessário para manter os padrões de segurança alimentar.",
@@ -78,7 +78,7 @@ const Services = () => {
       deliverables: ["Material Didático", "Certificados", "Relatório de Avaliação"]
     },
     {
-      icon: Users,
+      icon: LuUsers,
       title: "Serviços de Consultoria",
       shortDescription: "Orientação especializada no desenvolvimento e implementação de sistemas eficazes de gestão da segurança alimentar.",
       detailedDescription: "Nossa equipe de consultores especializados trabalha lado a lado com sua empresa para desenvolver, implementar e otimizar sistemas de gestão de segurança alimentar adequados ao seu negócio.",
@@ -97,32 +97,32 @@ const Services = () => {
 
   const additionalServices = [
     {
-      icon: FileText,
+      icon: LuFileText,
       title: "Documentação e Procedimentos",
       description: "Elaboração de manuais, POPs e documentação técnica completa para garantir a conformidade."
     },
     {
-      icon: BarChart3,
+      icon: LuChartColumn,
       title: "Análise de Riscos",
       description: "Identificação e avaliação detalhada de riscos em toda a cadeia produtiva alimentar."
     },
     {
-      icon: BookOpen,
+      icon: LuBookOpen,
       title: "Capacitação Online",
       description: "Plataforma digital com cursos interativos e atualizações constantes sobre segurança alimentar."
     },
     {
-      icon: Settings,
+      icon: LuSettings,
       title: "Otimização de Processos",
       description: "Melhoria contínua dos processos produtivos com foco em eficiência e segurança."
     },
     {
-      icon: Search,
+      icon: LuSearch,
       title: "Due Diligence",
       description: "Avaliação completa de fornecedores e parceiros comerciais em aspectos de segurança alimentar."
     },
     {
-      icon: Award,
+      icon: LuAward,
       title: "Preparação para Certificações",
       description: "Suporte especializado para obtenção de certificações nacionais e internacionais."
     }
@@ -238,13 +238,13 @@ const Services = () => {
                       {/* Features */}
                       <div className="lg:col-span-2">
                         <h4 className="font-bold text-foreground mb-4 flex items-center gap-2">
-                          <CheckCircle className="w-5 h-5 text-primary" />
+                          <LuCircleCheckBig className="w-5 h-5 text-primary" />
                           O que está incluído:
                         </h4>
                         <div className="grid md:grid-cols-2 gap-3">
                           {service.features.map((feature, featureIndex) => (
                             <div key={featureIndex} className="flex items-start gap-2">
-                              <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                              <LuCircleCheckBig className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                               <span className="text-muted-foreground text-sm leading-relaxed">{feature}</span>
                             </div>
                           ))}
@@ -255,7 +255,7 @@ const Services = () => {
                       <div className="space-y-6">
                         <div>
                           <h4 className="font-bold text-foreground mb-3 flex items-center gap-2">
-                            <Clock className="w-5 h-5 text-primary" />
+                            <LuClock className="w-5 h-5 text-primary" />
                             Duração
                           </h4>
                           <p className="text-muted-foreground">{service.duration}</p>
@@ -263,7 +263,7 @@ const Services = () => {
 
                         <div>
                           <h4 className="font-bold text-foreground mb-3 flex items-center gap-2">
-                            <FileText className="w-5 h-5 text-primary" />
+                            <LuFileText className="w-5 h-5 text-primary" />
                             Entregáveis
                           </h4>
                           <ul className="space-y-1">
@@ -373,7 +373,7 @@ const Services = () => {
         <section className="py-20 px-4 bg-background">
           <div className="container mx-auto max-w-4xl text-center">
             <div className="bg-primary/10 rounded-2xl p-8 md:p-12 animate-fade-in">
-              <Target className="w-16 h-16 text-primary mx-auto mb-6" />
+              <LuTarget className="w-16 h-16 text-primary mx-auto mb-6" />
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
                 Pronto para Transformar sua Operação?
               </h2>

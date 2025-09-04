@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { Star, Users, TrendingUp, Shield, CheckCircle, Building } from "lucide-react";
+import { LuStar, LuUsers, LuTrendingUp, LuShield, LuCircleCheckBig, LuBuilding } from "react-icons/lu";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Cases = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -41,7 +41,7 @@ const Cases = () => {
         "Redução de 85% em não conformidades",
         "Aumento de 30% na satisfação do cliente"
       ],
-      icon: Building,
+      icon: LuBuilding,
       metrics: { locations: "45", improvement: "85%", satisfaction: "30%" }
     },
     {
@@ -54,7 +54,7 @@ const Cases = () => {
         "Abertura de mercados internacionais",
         "Aumento de 50% na receita de exportação"
       ],
-      icon: TrendingUp,
+      icon: LuTrendingUp,
       metrics: { certification: "Grade A", markets: "12", revenue: "50%" }
     },
     {
@@ -67,7 +67,7 @@ const Cases = () => {
         "Redução de perdas em 40%",
         "Certificação orgânica obtida"
       ],
-      icon: Shield,
+      icon: LuShield,
       metrics: { traceability: "100%", reduction: "40%", organic: "Certificada" }
     }
   ];
@@ -124,14 +124,14 @@ const Cases = () => {
           <div className="container mx-auto max-w-4xl text-center animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-foreground">
               Casos de{" "}
-              <span className="text-primary gradient-primary bg-clip-text text-transparent">
+              <span className="text-primary gradient-primary bg-clip-text">
                 Sucesso
               </span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
               Conheça as histórias reais de empresas que transformaram suas operações com nossas soluções em segurança alimentar.
             </p>
-            
+
             {/* Quick Stats */}
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
               <div className="bg-primary/10 rounded-2xl p-6 animate-fade-in">
@@ -198,7 +198,7 @@ const Cases = () => {
                       {/* Challenge */}
                       <div>
                         <h4 className="font-bold text-foreground mb-3 flex items-center gap-2">
-                          <Users className="w-4 h-4 text-primary" />
+                          <LuUsers className="w-4 h-4 text-primary" />
                           Desafio
                         </h4>
                         <p className="text-muted-foreground leading-relaxed">{case_study.challenge}</p>
@@ -207,7 +207,7 @@ const Cases = () => {
                       {/* Solution */}
                       <div>
                         <h4 className="font-bold text-foreground mb-3 flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-primary" />
+                          <LuCircleCheckBig className="w-4 h-4 text-primary" />
                           Solução
                         </h4>
                         <p className="text-muted-foreground leading-relaxed">{case_study.solution}</p>
@@ -216,13 +216,13 @@ const Cases = () => {
                       {/* Results */}
                       <div>
                         <h4 className="font-bold text-foreground mb-3 flex items-center gap-2">
-                          <TrendingUp className="w-4 h-4 text-primary" />
+                          <LuTrendingUp className="w-4 h-4 text-primary" />
                           Resultados
                         </h4>
                         <ul className="space-y-2">
                           {case_study.results.map((result, resultIndex) => (
                             <li key={resultIndex} className="text-muted-foreground flex items-start gap-2">
-                              <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                              <LuCircleCheckBig className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                               {result}
                             </li>
                           ))}
@@ -309,7 +309,7 @@ const Cases = () => {
                     {/* Stars */}
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                        <LuStar key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
 

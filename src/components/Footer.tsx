@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Facebook, Instagram, Phone } from "lucide-react";
+import { LuPhoneCall } from "react-icons/lu";
+import { SiInstagram, SiWhatsapp } from "react-icons/si";
 
 const Footer = () => {
   return (
@@ -49,8 +50,8 @@ const Footer = () => {
               className="text-secondary-foreground/80 hover:text-primary hover:bg-secondary-foreground/10 rounded-full"
               asChild
             >
-              <a href="#" aria-label="Facebook">
-                <Facebook className="w-6 h-6" />
+              <a href="https://wa.me/5511979940775?text=Olá! Gostaria de saber mais sobre os serviços da Operação Nutri." aria-label="Whatsapp">
+                <SiWhatsapp className="w-6 h-6" />
               </a>
             </Button>
             <Button
@@ -59,8 +60,8 @@ const Footer = () => {
               className="text-secondary-foreground/80 hover:text-primary hover:bg-secondary-foreground/10 rounded-full"
               asChild
             >
-              <a href="#" aria-label="Instagram">
-                <Instagram className="w-6 h-6" />
+              <a href="https://www.instagram.com/operacaonutri/" aria-label="Instagram">
+                <SiInstagram className="w-6 h-6" />
               </a>
             </Button>
             <Button
@@ -69,8 +70,8 @@ const Footer = () => {
               className="text-secondary-foreground/80 hover:text-primary hover:bg-secondary-foreground/10 rounded-full"
               asChild
             >
-              <a href="#" aria-label="Whatsapp">
-                <Phone className="w-6 h-6" />
+              <a href="tel:+5511979940775" aria-label="Telefone">
+                <LuPhoneCall className="w-6 h-6" />
               </a>
             </Button>
           </div>

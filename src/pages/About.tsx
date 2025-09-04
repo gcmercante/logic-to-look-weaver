@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Shield, Users, Award, Target, Lightbulb, Handshake } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -7,6 +6,7 @@ import teamCeo from "@/assets/team-ceo.jpg";
 import teamTraining from "@/assets/team-training.jpg";
 import teamConsultant from "@/assets/team-consultant.jpg";
 import teamAbout from "@/assets/team-about.jpg";
+import { LuAward, LuHandshake, LuLightbulb, LuShield, LuTarget, LuUsers } from "react-icons/lu";
 
 const About = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -57,32 +57,32 @@ const About = () => {
 
   const values = [
     {
-      icon: Shield,
+      icon: LuShield,
       title: "Integridade",
       description: "Mantemos os mais altos padrões éticos em todas as nossas interações e processos."
     },
     {
-      icon: Award,
+      icon: LuAward,
       title: "Excelência",
       description: "Estamos comprometidos em entregar qualidade excepcional em tudo que fazemos."
     },
     {
-      icon: Lightbulb,
+      icon: LuLightbulb,
       title: "Inovação",
       description: "Buscamos continuamente formas novas e melhoradas de servir nossos clientes."
     },
     {
-      icon: Handshake,
+      icon: LuHandshake,
       title: "Colaboração",
       description: "Trabalhamos em estreita colaboração com nossos clientes para alcançar seus objetivos."
     },
     {
-      icon: Target,
+      icon: LuTarget,
       title: "Responsabilidade",
       description: "Assumimos a responsabilidade pelo nosso trabalho e somos responsáveis pelos nossos resultados."
     },
     {
-      icon: Users,
+      icon: LuUsers,
       title: "Compromisso",
       description: "Dedicamo-nos integralmente ao sucesso e segurança alimentar dos nossos clientes."
     }
@@ -184,7 +184,7 @@ const About = () => {
               <Card className="bg-card shadow-card hover:shadow-hero transition-smooth border-0 animate-fade-in">
                 <CardHeader className="text-center pb-4 px-8 pt-8">
                   <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                    <Target className="w-8 h-8 text-primary" />
+                    <LuTarget className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-2xl font-bold text-card-foreground">
                     Nossa Missão
@@ -200,7 +200,7 @@ const About = () => {
               <Card className="bg-card shadow-card hover:shadow-hero transition-smooth border-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <CardHeader className="text-center pb-4 px-8 pt-8">
                   <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                    <Lightbulb className="w-8 h-8 text-primary" />
+                    <LuLightbulb className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-2xl font-bold text-card-foreground">
                     Nossa Visão

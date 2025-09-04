@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 import {
-  Phone,
-  MessageCircle,
-  Mail,
-  Instagram,
-  Clock,
-  Send,
-  Building,
-  User,
-  MessageSquare
-} from "lucide-react";
+  LuPhone,
+  LuMail,
+  LuClock,
+  LuSend,
+  LuBuilding,
+  LuUser,
+  LuMessageSquare,
+  LuPhoneCall
+} from "react-icons/lu";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -18,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { SiInstagram, SiWhatsapp } from "react-icons/si";
 
 const Contact = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -55,23 +55,23 @@ const Contact = () => {
 
   const contactMethods = [
     {
-      icon: Phone,
+      icon: LuPhoneCall,
       title: "Telefone",
       description: "Ligue diretamente para nossa equipe",
-      contact: "+55 (11) 3456-7890",
-      action: () => window.open("tel:+5511345678900", "_self"),
+      contact: "+55 (11) 97994-0775",
+      action: () => window.open("tel:+5511979940775", "_self"),
       color: "text-green-600"
     },
     {
-      icon: MessageCircle,
+      icon: SiWhatsapp,
       title: "WhatsApp",
       description: "Converse conosco pelo WhatsApp",
-      contact: "+55 (11) 99999-8888",
-      action: () => window.open("https://wa.me/5511999998888?text=Olá! Gostaria de saber mais sobre os serviços da Operação Nutri.", "_blank"),
+      contact: "+55 (11) 97994-0775",
+      action: () => window.open("https://wa.me/5511979940775?text=Olá! Gostaria de saber mais sobre os serviços da Operação Nutri.", "_blank"),
       color: "text-green-500"
     },
     {
-      icon: Mail,
+      icon: LuMail,
       title: "E-mail",
       description: "Envie sua mensagem por e-mail",
       contact: "contato@operacaonutri.com.br",
@@ -79,7 +79,7 @@ const Contact = () => {
       color: "text-blue-600"
     },
     {
-      icon: Instagram,
+      icon: SiInstagram,
       title: "Instagram",
       description: "Siga-nos nas redes sociais",
       contact: "@operacaonutri",
@@ -90,12 +90,11 @@ const Contact = () => {
 
   const officeInfo = [
     {
-      icon: Clock,
+      icon: LuClock,
       title: "Horário de Atendimento",
       details: [
         "Segunda a Sexta: 8h às 18h",
-        "Sábado: 9h às 13h",
-        "Domingo: Fechado"
+        "Feriados: Fechado"
       ]
     }
   ];
@@ -109,13 +108,10 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);
 
-    // For now, just show an alert
     alert('Obrigado! Sua mensagem foi enviada. Entraremos em contato em breve.');
 
-    // Reset form
     setFormData({
       name: '',
       email: '',
@@ -211,7 +207,7 @@ const Contact = () => {
                       <div className="grid md:grid-cols-2 gap-4">
                         <div className="space-y-2">
                           <Label htmlFor="name" className="flex items-center gap-2">
-                            <User className="w-4 h-4 text-primary" />
+                            <LuUser className="w-4 h-4 text-primary" />
                             Nome Completo *
                           </Label>
                           <Input
@@ -225,7 +221,7 @@ const Contact = () => {
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="email" className="flex items-center gap-2">
-                            <Mail className="w-4 h-4 text-primary" />
+                            <LuMail className="w-4 h-4 text-primary" />
                             E-mail *
                           </Label>
                           <Input
@@ -243,7 +239,7 @@ const Contact = () => {
                       <div className="grid md:grid-cols-2 gap-4">
                         <div className="space-y-2">
                           <Label htmlFor="phone" className="flex items-center gap-2">
-                            <Phone className="w-4 h-4 text-primary" />
+                            <LuPhone className="w-4 h-4 text-primary" />
                             Telefone
                           </Label>
                           <Input
@@ -256,7 +252,7 @@ const Contact = () => {
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="company" className="flex items-center gap-2">
-                            <Building className="w-4 h-4 text-primary" />
+                            <LuBuilding className="w-4 h-4 text-primary" />
                             Empresa
                           </Label>
                           <Input
@@ -288,7 +284,7 @@ const Contact = () => {
 
                       <div className="space-y-2">
                         <Label htmlFor="message" className="flex items-center gap-2">
-                          <MessageSquare className="w-4 h-4 text-primary" />
+                          <LuMessageSquare className="w-4 h-4 text-primary" />
                           Mensagem *
                         </Label>
                         <Textarea
@@ -307,7 +303,7 @@ const Contact = () => {
                         size="lg"
                         className="w-full text-lg font-semibold rounded-full transition-smooth shadow-card hover:shadow-hero flex items-center gap-2"
                       >
-                        <Send className="w-5 h-5" />
+                        <LuSend className="w-5 h-5" />
                         Enviar Mensagem
                       </Button>
                     </form>
@@ -378,10 +374,7 @@ const Contact = () => {
             </div>
           </div>
         </section>
-
-
       </main>
-
       <Footer />
     </div>
   );
