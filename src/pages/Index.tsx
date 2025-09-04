@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { Shield, GraduationCap, Users, ArrowRight, CheckCircle, Star, TrendingUp } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import heroBackground from "@/assets/hero-background.jpg";
+import { LuArrowRight, LuCircleCheckBig, LuGraduationCap, LuShield, LuStar, LuTrendingUp, LuUser } from "react-icons/lu"
 
 const Index = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -43,19 +43,19 @@ const Index = () => {
 
   const services = [
     {
-      icon: Shield,
+      icon: LuShield,
       title: "Auditorias de Segurança Alimentar",
       description: "Avaliações completas de suas operações para identificar áreas de melhoria e garantir a conformidade regulatória.",
       path: "/services"
     },
     {
-      icon: GraduationCap,
+      icon: LuGraduationCap,
       title: "Programas de Treinamento",
       description: "Programas de treinamento abrangentes para sua equipe, cobrindo todos os aspectos de segurança alimentar e higiene.",
       path: "/services"
     },
     {
-      icon: Users,
+      icon: LuUser,
       title: "Serviços de Consultoria",
       description: "Orientação especializada no desenvolvimento e implementação de sistemas eficazes de gestão da segurança alimentar.",
       path: "/services"
@@ -74,14 +74,14 @@ const Index = () => {
       title: "Nossa Empresa",
       description: "Conheça nossa história, missão e a equipe especializada que transformou centenas de empresas.",
       path: "/about",
-      icon: Users,
+      icon: LuUser,
       features: ["14 anos de mercado", "Equipe especializada", "Certificações internacionais"]
     },
     {
       title: "Casos de Sucesso",
       description: "Descubra histórias reais de transformação e os resultados alcançados por nossos clientes.",
       path: "/cases",
-      icon: TrendingUp,
+      icon: LuTrendingUp,
       features: ["500+ projetos", "98% taxa de sucesso", "Clientes satisfeitos"]
     }
   ];
@@ -107,7 +107,7 @@ const Index = () => {
           <div className="relative z-10 max-w-4xl mx-auto text-center animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-foreground">
               Garantindo a Segurança dos Alimentos,{" "}
-              <span className="text-primary gradient-primary bg-clip-text text-transparent">
+              <span className="text-primary gradient-primary bg-clip-text">
                 Protegendo a Sua Marca
               </span>
             </h1>
@@ -189,7 +189,7 @@ const Index = () => {
                     </p>
                     <div className="text-center flex-shrink-0">
                       <span className="text-primary font-semibold flex items-center justify-center gap-1 group-hover:gap-2 transition-all">
-                        Saiba mais <ArrowRight className="w-4 h-4" />
+                        Saiba mais <LuArrowRight className="w-4 h-4" />
                       </span>
                     </div>
                   </CardContent>
@@ -251,18 +251,18 @@ const Index = () => {
                         <p className="text-muted-foreground leading-relaxed mb-6">
                           {highlight.description}
                         </p>
-                        
+
                         <ul className="space-y-2 mb-6">
                           {highlight.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center gap-2 text-muted-foreground">
-                              <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                              <LuCircleCheckBig className="w-4 h-4 text-primary flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
                         </ul>
 
                         <div className="flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
-                          Descubra mais <ArrowRight className="w-4 h-4" />
+                          Descubra mais <LuArrowRight className="w-4 h-4" />
                         </div>
                       </div>
                     </div>
@@ -275,12 +275,12 @@ const Index = () => {
                       <p className="text-muted-foreground leading-relaxed mb-6">
                         {highlight.description}
                       </p>
-                      
+
                       <div className="flex justify-center mb-6">
                         <ul className="space-y-2">
                           {highlight.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-start gap-2 text-muted-foreground">
-                              <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                              <LuCircleCheckBig className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                               <span>{feature}</span>
                             </li>
                           ))}
@@ -288,7 +288,7 @@ const Index = () => {
                       </div>
 
                       <div className="flex items-center justify-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
-                        Descubra mais <ArrowRight className="w-4 h-4" />
+                        Descubra mais <LuArrowRight className="w-4 h-4" />
                       </div>
                     </div>
                   </CardContent>
@@ -304,14 +304,14 @@ const Index = () => {
             <div className="animate-fade-in">
               <div className="flex justify-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                  <LuStar key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                 ))}
               </div>
-              
+
               <blockquote className="text-xl md:text-2xl text-foreground font-medium leading-relaxed mb-8">
                 "A Operação Nutri transformou nossa operação. O programa de treinamento foi excepcional e os resultados superaram nossas expectativas."
               </blockquote>
-              
+
               <div className="mb-8">
                 <p className="font-bold text-foreground text-lg">Carlos Silva</p>
                 <p className="text-primary font-semibold">Diretor de Qualidade, RestauranTech</p>

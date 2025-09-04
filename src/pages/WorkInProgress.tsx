@@ -1,17 +1,10 @@
 import { useState, useEffect } from "react";
-import {
-  Phone,
-  MessageCircle,
-  Mail,
-  Instagram,
-  Clock,
-  Settings,
-  ArrowRight
-} from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { SiInstagram, SiWhatsapp } from 'react-icons/si';
+import { LuClock, LuMail, LuPhoneCall, LuSettings } from "react-icons/lu";
 
 const WorkInProgress = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -41,23 +34,23 @@ const WorkInProgress = () => {
 
   const contactMethods = [
     {
-      icon: Phone,
+      icon: LuPhoneCall,
       title: "Telefone",
       description: "Ligue diretamente para nossa equipe",
-      contact: "+55 (11) 3456-7890",
-      action: () => window.open("tel:+5511345678900", "_self"),
+      contact: "+55 (11) 97994-0775",
+      action: () => window.open("tel:+5511979940775", "_self"),
       color: "text-green-600"
     },
     {
-      icon: MessageCircle,
+      icon: SiWhatsapp,
       title: "WhatsApp",
       description: "Converse conosco pelo WhatsApp",
-      contact: "+55 (11) 99999-8888",
-      action: () => window.open("https://wa.me/5511999998888?text=Olá! Gostaria de saber mais sobre os serviços da Operação Nutri.", "_blank"),
+      contact: "+55 (11) 97994-0775",
+      action: () => window.open("https://wa.me/5511979940775?text=Olá! Gostaria de saber mais sobre os serviços da Operação Nutri.", "_blank"),
       color: "text-green-500"
     },
     {
-      icon: Mail,
+      icon: LuMail,
       title: "E-mail",
       description: "Envie sua mensagem por e-mail",
       contact: "contato@operacaonutri.com.br",
@@ -65,7 +58,7 @@ const WorkInProgress = () => {
       color: "text-blue-600"
     },
     {
-      icon: Instagram,
+      icon: SiInstagram,
       title: "Instagram",
       description: "Siga-nos nas redes sociais",
       contact: "@operacaonutri",
@@ -91,7 +84,7 @@ const WorkInProgress = () => {
         <section className="py-20 px-4 bg-background">
           <div className="container mx-auto max-w-4xl text-center animate-fade-in">
             <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8">
-              <Settings className="w-12 h-12 text-primary animate-spin" style={{ animationDuration: '3s' }} />
+              <LuSettings className="w-12 h-12 text-primary animate-spin" style={{ animationDuration: '3s' }} />
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-foreground">
@@ -178,15 +171,14 @@ const WorkInProgress = () => {
                 {/* Mobile Layout - Icon on top */}
                 <div className="block text-center">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Clock className="w-8 h-8 text-primary" />
+                    <LuClock className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="font-bold text-card-foreground text-xl mb-6">
                     Horário de Atendimento
                   </h3>
                   <div className="space-y-3">
                     <p className="text-muted-foreground leading-relaxed text-lg">Segunda a Sexta: 8h às 18h</p>
-                    <p className="text-muted-foreground leading-relaxed text-lg">Sábado: 9h às 13h</p>
-                    <p className="text-muted-foreground leading-relaxed text-lg">Domingo: Fechado</p>
+                    <p className="text-muted-foreground leading-relaxed text-lg">Feriados: Fechado</p>
                   </div>
                 </div>
               </CardContent>
@@ -238,20 +230,20 @@ const WorkInProgress = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
-                  onClick={() => window.open("https://wa.me/5511999998888?text=Olá! Gostaria de saber mais sobre os serviços da Operação Nutri.", "_blank")}
+                  onClick={() => window.open("https://wa.me/5511979940775?text=Olá! Gostaria de saber mais sobre os serviços da Operação Nutri.", "_blank")}
                   size="lg"
                   className="text-lg font-semibold rounded-full transition-smooth shadow-card hover:shadow-hero px-8 flex items-center gap-2"
                 >
-                  <MessageCircle className="w-5 h-5" />
+                  <SiWhatsapp className="w-5 h-5" />
                   WhatsApp
                 </Button>
                 <Button
-                  onClick={() => window.open("tel:+5511345678900", "_self")}
+                  onClick={() => window.open("tel:+5511979940775", "_self")}
                   variant="outline"
                   size="lg"
                   className="text-lg font-semibold rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-smooth px-8 flex items-center gap-2"
                 >
-                  <Phone className="w-5 h-5" />
+                  <LuPhoneCall className="w-5 h-5" />
                   Ligar Agora
                 </Button>
               </div>
