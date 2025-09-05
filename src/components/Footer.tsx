@@ -50,7 +50,7 @@ const Footer = () => {
               className="text-secondary-foreground/80 hover:text-primary hover:bg-secondary-foreground/10 rounded-full"
               asChild
             >
-              <a href="https://wa.me/5511979940775?text=Olá! Gostaria de saber mais sobre os serviços da Operação Nutri." aria-label="Whatsapp">
+              <a href="https://wa.me/5511934707109?text=Olá! Gostaria de saber mais sobre os serviços da Operação Nutri." aria-label="Whatsapp">
                 <SiWhatsapp className="w-6 h-6" />
               </a>
             </Button>
@@ -70,7 +70,7 @@ const Footer = () => {
               className="text-secondary-foreground/80 hover:text-primary hover:bg-secondary-foreground/10 rounded-full"
               asChild
             >
-              <a href="tel:+5511979940775" aria-label="Telefone">
+              <a href="tel:+5511934707109" aria-label="Telefone">
                 <LuPhoneCall className="w-6 h-6" />
               </a>
             </Button>

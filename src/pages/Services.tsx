@@ -131,28 +131,33 @@ const Services = () => {
   const processSteps = [
     {
       step: "01",
-      title: "Diagnóstico Inicial",
+      title: "Auditoria",
       description: "Avaliação completa da situação atual da empresa e identificação das necessidades específicas."
     },
     {
       step: "02",
-      title: "Proposta Personalizada",
-      description: "Desenvolvimento de uma proposta customizada com cronograma e metodologia adequados."
+      title: "Diagnóstico",
+      description: "Análise detalhada dos pontos fortes e áreas de melhoria, com base nas melhores práticas do setor."
     },
     {
       step: "03",
-      title: "Implementação",
-      description: "Execução do projeto com acompanhamento constante e ajustes quando necessário."
+      title: "Treinamento",
+      description: "Capacitação da equipe com foco em segurança alimentar, higiene e boas práticas operacionais."
     },
     {
       step: "04",
-      title: "Validação e Entrega",
-      description: "Verificação dos resultados alcançados e entrega de toda a documentação necessária."
+      title: "Correções",
+      description: "Implementação das melhorias recomendadas para garantir a conformidade e a excelência operacional."
     },
     {
       step: "05",
-      title: "Suporte Continuado",
-      description: "Acompanhamento pós-projeto para garantir a sustentabilidade das melhorias implementadas."
+      title: "Documentos",
+      description: "Desenvolvimento de toda a documentação necessária, incluindo manuais, POPs e registros."
+    },
+    {
+      step: "06",
+      title: "Manutenção",
+      description: "Acompanhamento contínuo para garantir a sustentabilidade das práticas implementadas e a melhoria contínua."
     }
   ];
 
@@ -185,7 +190,7 @@ const Services = () => {
               size="lg"
               className="text-lg font-semibold rounded-full transition-smooth shadow-card hover:shadow-hero"
             >
-              Solicite uma Consulta
+              Solicite uma visita
             </Button>
           </div>
         </section>

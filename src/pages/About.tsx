@@ -192,7 +192,7 @@ const About = () => {
                 </CardHeader>
                 <CardContent className="px-8 pb-8">
                   <p className="text-muted-foreground text-center leading-relaxed text-lg">
-                    Capacitar empresas de alimentos com o conhecimento e ferramentas necessárias para garantir os mais altos padrões de segurança alimentar. Nos esforçamos para proteger os consumidores e aprimorar a reputação de nossos clientes através de treinamento abrangente, consultoria e soluções tecnológicas.
+                    Promover qualidade e segurança alimentar através das legislações vigentes, atuando de forma preventiva e corretiva, capacitando profissionais e desenvolvendo oportunidades para agregar valor ao estabelecimento ou produto, por meio de monitoramento de procedimentos operacionais e aprimoramento dos serviços.
                   </p>
                 </CardContent>
               </Card>

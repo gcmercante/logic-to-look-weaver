@@ -58,16 +58,16 @@ const Contact = () => {
       icon: LuPhoneCall,
       title: "Telefone",
       description: "Ligue diretamente para nossa equipe",
-      contact: "+55 (11) 97994-0775",
-      action: () => window.open("tel:+5511979940775", "_self"),
+      contact: "+55 (11) 93470-7109",
+      action: () => window.open("tel:+5511934707109", "_self"),
       color: "text-green-600"
     },
     {
       icon: SiWhatsapp,
       title: "WhatsApp",
       description: "Converse conosco pelo WhatsApp",
-      contact: "+55 (11) 97994-0775",
-      action: () => window.open("https://wa.me/5511979940775?text=Olá! Gostaria de saber mais sobre os serviços da Operação Nutri.", "_blank"),
+      contact: "+55 (11) 93470-7109",
+      action: () => window.open("https://wa.me/5511934707109?text=Olá! Gostaria de saber mais sobre os serviços da Operação Nutri.", "_blank"),
       color: "text-green-500"
     },
     {
